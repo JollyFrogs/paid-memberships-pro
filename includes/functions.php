@@ -493,9 +493,9 @@ function pmpro_getLevelsCost( &$levels, $tags = true, $short = false ) {
 
 	// initial payment
 	if ( ! $short ) {
-		$r = sprintf( __( 'The price for membership is <strong>%s</strong> now', 'paid-memberships-pro' ), pmpro_formatPrice( $initpmt ) );
+		$r = sprintf( __( 'The price for membership is <strong>%s</strong>', 'paid-memberships-pro' ), pmpro_formatPrice( $initpmt ) );
 	} else {
-		$r = sprintf( __( '<strong>%s</strong> now', 'paid-memberships-pro' ), pmpro_formatPrice( $initpmt ) );
+		$r = sprintf( __( '<strong>%s</strong>', 'paid-memberships-pro' ), pmpro_formatPrice( $initpmt ) );
 	}
 
 	// recurring part
@@ -528,8 +528,6 @@ function pmpro_getLevelsCost( &$levels, $tags = true, $short = false ) {
 			$r .= implode( ', ', $billtextparts );
 		}
 		$r .= ', and ' . $laststanza . '.';
-	} else {
-		$r .= '.';
 	}
 
 	// add a space
